@@ -3,7 +3,7 @@ CXX = $(PREFIX)g++
 AR = $(PREFIX)ar
 
 # ARMv8 (arm64) enable, comment it if on arm32
-ONARM64 = 1
+# ONARM64 = 1
 
 #FRAME supports 720P or 480P
 #FRAME_720P = 1
@@ -38,9 +38,11 @@ CFLAGS += `pkg-config --cflags $(GTK-VERSION)`
 
 CFLAGS += -Wall -O2
 CFLAGS += -I$(INCDIR)
+CFLAGS += -g
 
 CXXFLAGS += -Wall -O2
 CXXFLAGS += -I$(INCDIR)
+CXXFLAGS += -g
 
 #CFLAGS +=-DDEBUG
 #CXXFLAGS +=-DDEBUG

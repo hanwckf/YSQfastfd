@@ -7,7 +7,7 @@ include $(TOPDIR)/makefile.mk
 LIBDIRS = $(LIBFCVDIR)
 LIBDIRS += $(MLIBDIR)
 
-APPDIRS = $(TOPDIR)/fcvlibtest
+#APPDIRS = $(TOPDIR)/fcvlibtest
 APPDIRS += $(TOPDIR)/fddemo
 
 all : libs apps

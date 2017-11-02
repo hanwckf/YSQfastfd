@@ -86,7 +86,7 @@ void algr_ysqfd_exit(void)
 	free(algr);
 }
 
-int ysqfd_process(void *keyinfo, fcvImage *vimg)
+int ysqfd_process(void *keyinfo, fcvImage *vimg, int* faceCounts)
 {
 	int ret, i;
 	int kiresnr;
@@ -114,7 +114,7 @@ int ysqfd_process(void *keyinfo, fcvImage *vimg)
 	}
 
 	kiresnr = *kires++;
-
+	*faceCounts = kiresnr;
 #ifdef PERF_STATISTICS
 	printf("Detected %d face(s)"
 			" : Took %ld sec %ld usec\n",
